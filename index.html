@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+    //written with JQuery << want to transfer to Vue// 
+      $(document).ready(function(){
+    //connects the app to the localhost
+        var socket = io.connect("http://localhost:8080");
+        $('input[id="red-button"]').click(function(){
+            if($(this).prop("checked") == true){
+              socket.emit("red-off");
+            }
+            else{
+              socket.emit("red-on");
+            }
+        });
+        $('input[id="green-button"]').click(function(){
+          if($(this).prop("checked") == true){
+              socket.emit("green-off");
+            }
+            else{
+              socket.emit("green-on");
+            }
+        });
+        $('input[id="blue-button"]').click(function(){
+          if($(this).prop("checked") == true){
+              socket.emit("blue-off");
+            }
+            else{
+              socket.emit("blue-on");
+            }
+        });
+    });
+    </script>
+  </head>
+  <body>
+    <div<></div>
+      <div class="custom-control custom-switch">
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          id="red-button"
+          
+        />
+        <label class="custom-control-label" for="red-button"
+          >RED</label
+        >
+      </div>
+
+        <div class="custom-control custom-switch">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="green-button"
+            
+          />
+          <label class="custom-control-label" for="green-button"
+            >GREEN</label
+          >
+        </div>
+
+          <div class="custom-control custom-switch">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="blue-button"
+              
+            />
+            <label class="custom-control-label" for="blue-button"
+              >BLUE</label
+            >
+          </div>
+
+    
+     
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "johnny-five-io",
+  "version": "0.0.0",
+  "description": "Browser interface for Johnny-Five",
+  "main": "script.js",
+  "dependencies": {
+    "johnny-five": "^1.3.1",
+    "nodemon": "^2.0.2",
+    "rangeslider.js": "^2.3.3",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
