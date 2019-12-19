@@ -50,17 +50,18 @@
         });
     });
     </script>
+    
   </head>
   <body>
-    <div<></div>
+    <div class="container-fluid">
       <div class="custom-control custom-switch">
         <input
           type="checkbox"
           class="custom-control-input"
           id="red-button"
-          
+          style="width:5vw"
         />
-        <label class="custom-control-label" for="red-button"
+        <label id="red" class="custom-control-label text-danger" for="red-button"
           >RED</label
         >
       </div>
@@ -68,11 +69,11 @@
         <div class="custom-control custom-switch">
           <input
             type="checkbox"
-            class="custom-control-input"
+            class="custom-control-input my_checkbox"
             id="green-button"
             
           />
-          <label class="custom-control-label" for="green-button"
+          <label id="green" class="custom-control-label text-success" for="green-button"
             >GREEN</label
           >
         </div>
@@ -84,10 +85,12 @@
               id="blue-button"
               
             />
-            <label class="custom-control-label" for="blue-button"
+            <label id="blue" class="custom-control-label text-primary" for="blue-button"
               >BLUE</label
             >
           </div>
+
+        </div>
 
     
      
