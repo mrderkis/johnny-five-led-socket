@@ -23,7 +23,7 @@
     //written with JQuery << want to transfer to Vue// 
       $(document).ready(function(){
     //connects the app to the localhost
-        var socket = io.connect("http://localhost:8080");
+        var socket = io.connect("http://192.168.88.192:8080");
         $('input[id="red-button"]').click(function(){
             if($(this).prop("checked") == true){
               socket.emit("red-off");
